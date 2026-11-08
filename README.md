@@ -287,3 +287,33 @@ O trabalho de Cloud está dividido em três blocos.
 - **Cuidar do que é usado.** *O que é feito:* é mantida a lista dos programas utilizados (SBOM) e feita a verificação de suas dependências; senhas e chaves ficam fora do código; os fornecedores de sensores são avaliados (identidade, atualização e prazo de suporte); e um teste de invasão independente é feito antes de entrar no ar. *Para quê:* não deixar uma peça frágil comprometer o sistema inteiro.
 - **Proteger a privacidade.** *O que é feito:* coleta mínima de dados, criptografia (dados embaralhados no envio e quando guardados) e registros sem identificação direta, como manda a LGPD (Lei Geral de Proteção de Dados, art. 46, § 2º) [35]. *Para quê:* não expor as pessoas.
 - **Ajudar a pessoa a não cair em golpe.** *O que é feito:* um endereço único e oficial e uma página de "alertas ativos" para conferir se a mensagem é verdadeira; a orientação permanente é nunca clicar em links de mensagens suspeitas nem pagar para receber alerta. *Para quê:* manter a confiança nos alertas.
+
+#### Como as áreas se complementam
+
+| Preocupação | Cloud faz | Cibersegurança faz |
+|---|---|---|
+| Ficar no ar | Cópias do site, escala e plano B | Proteção contra ataques e contra excesso de acessos |
+| Informação verdadeira | Guarda as versões dos dados | Confere a origem e registra quem mudou o quê |
+| Dados protegidos | Guarda os dados pessoais e administrativos no Brasil | Controla quem acessa e protege os dados |
+| Voltar depois de um problema | Cópias de segurança e recuperação | Plano de resposta e cópias que ninguém consegue alterar |
+
+Uma nuvem que cresce com facilidade, mas tem permissões frágeis, aumenta o estrago de uma conta invadida. Um ambiente seguro, mas sem plano B nem teste de recuperação, cai na hora errada. Por isso, as duas áreas definem juntas os requisitos do projeto, em vez de uma "entregar" para a outra revisar.
+
+**Quem constrói cada componente.** Os três integrantes de Cloud respondem pela infraestrutura, pela porta de entrada dos dados (API), pela publicação (CDN e pacotes regionais), pelo front-end do site (PWA) e pela acessibilidade, inclusive a auditoria WCAG. O integrante de Cibersegurança responde pela assinatura dos alertas e dos pacotes, pelo painel dos operadores, pela gestão de identidades e acessos e pela vigilância (SIEM e SOC). A Engenharia de Dados e a Ciência de Dados apoiam o projeto: com os órgãos parceiros (CEMADEN, SGB e equipe de dados da prefeitura), definem as bases de entrada, o formato dos dados e as regras de qualidade, e validam os pacotes de mapas e o índice de endereços antes da publicação. A automação desses passos (checagem de qualidade e geração dos pacotes) é implementada pela equipe de Cloud.
+
+#### Parceiros externos (áreas centrais do dossiê que não estão no grupo)
+
+- **Redes (operadoras e Anatel, a agência de telecomunicações):** entregam o Cell Broadcast e mantêm a energia, a conexão das antenas e as redes de rádio de emergência. A plataforma depende disso e não o substitui [8].
+- **Engenharia de Dados e Ciência de Dados (CEMADEN, INMET e ANA, a agência de águas):** observam a chuva, fazem a previsão e definem quando alertar. A plataforma usa esses produtos e **não cria modelo próprio de previsão na fase 1** (ver a decisão 6 na seção 7).
+
+### 2.4 O que a tecnologia não resolve
+
+- **Drenagem, contenção de encostas, moradia segura, saneamento e ordenamento territorial.** A tecnologia informa que o risco está chegando, mas não elimina a condição física que o produz.
+- **A decisão de alertar e de evacuar.** É humana e institucional (Defesa Civil). O sistema fornece evidências, não ordens.
+- **Resgate, abrigo, assistência e recuperação.** Dependem de equipes, veículos, equipamentos e recursos públicos.
+- **Confiança e preparação da população.** Um alerta eficaz exige que as pessoas confiem, entendam e saibam o que fazer. Isso se constrói com educação, simulados e presença comunitária.
+- **Cobertura de sensores e de rede.** A plataforma só mostra o que os órgãos oficiais medem e mapeiam; onde não há dado, não há informação.
+- **Incerteza da previsão.** A previsão para o município não aponta qual rua será atingida.
+- **A decisão de adotar, financiar e manter o projeto.** Cabe à instituição que o adotar, seja ela do governo ou privada, decidir se os detalhes técnicos, de equipe e de custo descritos aqui são viáveis para a sua realidade (ver 5.2).
+
+**O que acontece quando a energia e a rede caem (pergunta-guia do dossiê).** É importante deixar claro que **o site não carrega pela primeira vez nem se atualiza para quem está sem rede**, e o Cell Broadcast também não chega a quem está sem cobertura 4G ou 5G, por exemplo se a antena estiver fora do ar [8]. O que o projeto faz: (1) o site já visitado e salvo no aparelho continua mostrando o último mapa, as orientações e os telefones (quem nunca o abriu com internet não tem o pacote salvo, e por isso o apoio presencial é essencial); (2) o equipamento local guarda as leituras e as reenvia quando a conexão volta; (3) o conteúdo pronto continua disponível na CDN assim que a rede do usuário retornar; (4) a estratégia presencial (sirenes, rádio, agentes de campo, pontos de apoio e material impresso) cobre o intervalo em que não há rede. A resiliência é resultado de tecnologia, infraestrutura física, protocolos e pessoas treinadas; nenhum desses elementos sozinho basta.

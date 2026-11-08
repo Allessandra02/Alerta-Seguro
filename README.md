@@ -536,3 +536,62 @@ Cabe às operadoras e à instituição responsável decidir se e quando a gratui
 
   Se algum desses itens não for atendido, a plataforma continua usando as previsões oficiais.
   
+## 6. Impacto esperado
+
+> **Em resumo:** o projeto será medido por 13 indicadores, agrupados em quatro perguntas: o alerta chega às pessoas? o site funciona bem e gasta pouco? o sistema é seguro e todos conseguem usar? quem mais precisa está sendo atendido? Os moradores serão ouvidos antes, durante e depois do piloto, e a ampliação só acontece se os critérios forem cumpridos.
+
+### 6.1 Indicadores
+
+As metas abaixo são **propostas do grupo** para o piloto de 12 meses. As linhas de base (valores de partida) serão medidas nos primeiros 3 meses, e as metas serão calibradas com a Defesa Civil. A instituição que adotar o projeto pode ajustá-las à sua realidade. A numeração dos indicadores é usada em outras seções.
+
+**A. Chegada: o alerta chega às pessoas?**
+
+| Indicador | Como medir | Meta | Prazo |
+|---|---|---|---|
+| 1. Alcance dos alertas | Pesquisa por amostragem nos domicílios das áreas do piloto, conduzida por organização parceira (Defesa Civil, universidade ou associação comunitária), que repassa ao grupo só resultados agregados: percentual de moradores que receberam o último alerta por pelo menos um canal. Mede o sistema de alerta como um todo (Cell Broadcast, SMS, rádio e equipes de campo), que depende das operadoras e da Defesa Civil; não é meta exclusiva da plataforma | Pelo menos 90% | 12 meses |
+| 2. Uso do Alerta Seguro após o alerta | Contagem **somada** dos acessos ao endereço divulgado no alerta, sem rastrear pessoas, em relação à população da área alertada | Crescimento a cada evento; meta inicial a definir depois da linha de base | 12 meses |
+| 5. Antecedência dos alertas de ação imediata | Diferença entre o horário do alerta e o horário do impacto registrado pela Defesa Civil | Registrar 100% dos casos; **meta de pelo menos 30 min em 70% dos eventos em que o fenômeno permitir** (as enxurradas súbitas são relatadas à parte) | 12 meses |
+| 12. Falsos alarmes | Percentual de alertas de ação imediata sem ocorrência confirmada pela Defesa Civil em até 24 h; revisto a cada evento | Registrar 100% dos casos; meta definida com a Defesa Civil depois da linha de base | 12 meses |
+
+**B. Funcionamento: o site funciona bem e gasta pouco?**
+
+| Indicador | Como medir | Meta | Prazo |
+|---|---|---|---|
+| 3. Desempenho em rede lenta | Teste automático com rede 3G simulada na tela "Meu local" | Tela de risco utilizável em até 5 s e peso inicial de poucas centenas de KB (o pacote regional para uso offline é separado: seu peso é medido no protótipo e informado, com meta definida depois da medição) | Antes do piloto e a cada versão |
+| 4. Disponibilidade no período de alertas | Monitoramento do tempo em que o site está no ar (*uptime*) e teste de carga; mede a disponibilidade do site, não a entrega do Cell Broadcast ou do SMS pelas operadoras | Pelo menos 99,9% durante alertas ativos; teste de carga aprovado antes da temporada de chuvas | Contínuo |
+| 11. Pegada de carbono | CO2.js na esteira de entrega: emissão estimada por visita | Redução de 30% em relação à primeira versão | 12 meses |
+| 13. Sustentabilidade de hardware e hospedagem | Percentual de equipamentos com plano de descarte e logística reversa em contrato; PUE e WUE do provedor publicados; hospedagem verificada no Green Web Dataset (ou justificativa documentada se não constar) | 100% | Antes do piloto |
+
+**C. Segurança e acessibilidade: o sistema é seguro e todos conseguem usar?**
+
+| Indicador | Como medir | Meta | Prazo |
+|---|---|---|---|
+| 6. Acessibilidade | Auditoria WCAG 2.2, automática e manual, mais testes com usuários conduzidos por organizações parceiras, com relatório agregado | 100% dos critérios A e AA atendidos nos fluxos principais; nenhuma falha crítica em aberto | Antes do piloto e a cada versão |
+| 8. Segurança | Número de alertas não autorizados originados na plataforma ou no seu painel; tempo médio para detectar (MTTD) e para responder (MTTR) a incidentes; percentual de contas críticas com MFA forte | Zero alertas não autorizados originados na plataforma ou no seu painel (incidentes em sistemas fora da plataforma, como o IDAP, são registrados à parte); contas críticas com MFA forte em 100%; MTTD de até 15 min em exercício | Contínuo |
+| 10. Contestações | Percentual de contestações respondidas no prazo (24 h para segurança e 5 dias úteis para as demais) | Pelo menos 95% | Contínuo |
+
+**D. Equidade: quem mais precisa está sendo atendido?**
+
+| Indicador | Como medir | Meta | Prazo |
+|---|---|---|---|
+| 7. Compreensão da orientação | Teste curto com moradores, conduzido por organização parceira e com resultados agregados, inclusive por idosos, pessoas com deficiência e pessoas sem smartphone: "o que você faz ao receber este alerta e onde busca ajuda?" | Pelo menos 80% respondem corretamente | Antes da ampliação |
+| 9. Equidade territorial e de perfil | Diferença de alcance e de compreensão entre bairros periféricos e áreas centrais, e entre idosos e pessoas com deficiência e os demais (resultados agregados dos parceiros) | Diferença de até 10 pontos percentuais | 12 meses |
+
+### 6.2 Como os usuários serão ouvidos
+
+- **Antes de construir:** oficinas com moradores de áreas de várzea e de encosta, lideranças comunitárias, agentes comunitários de saúde e equipes da Defesa Civil, para validar a linguagem, os ícones, os telefones e as rotas.
+- **Durante o piloto:** testes de uso, conduzidos por organizações parceiras com relatório agregado, com idosos, pessoas cegas (com leitor de tela), pessoas surdas (com Libras), pessoas com deficiência motora e pessoas sem smartphone próprio; formulário de contestação sempre disponível; enquetes curtas e opcionais depois de cada evento, sem identificação.
+- **Antes de ampliar:** relatório público do piloto, devolutiva em reunião comunitária e **critérios para seguir ou parar (*go/no-go*)**: indicadores 1, 6, 7, 8 e 9 atingidos e nenhuma falha crítica de segurança ou de acessibilidade em aberto. Um comitê consultivo, com representantes da comunidade, acompanha a decisão.
+
+### 6.3 Se a solução não pegar
+
+**Sinais:** pouco acesso ao endereço divulgado; pouco conhecimento do que fazer (indicador 7 abaixo de metade da meta); reclamações de que "não abre" ou "não entendi"; desconfiança de que a mensagem é golpe.
+
+**O que fazer:**
+
+1. **Investigar a causa antes de mudar o produto:** o morador não sabe que o site existe (divulgação), não confia (autenticidade), não consegue abrir (rede ou pacote de dados) ou não entende (linguagem)?
+2. **Divulgação:** QR codes e cartazes em escolas, UBS e pontos de apoio; parcerias com rádios comunitárias; simulados com a comunidade antes da temporada de chuvas.
+3. **Pedir menos ao usuário:** voltar a poucas telas (risco do local, o que fazer e telefones), com mensagens por SMS e rádio que levem a mesma informação sem depender do site.
+4. **Confiança:** reforçar o endereço oficial, a página de alertas ativos e as campanhas contra golpes.
+5. **Acesso:** se o problema for o pacote de dados, aplicar o plano B da seção 4.1 (Wi-Fi em pontos de apoio, site pré-carregado e página mínima).
+6. **Plano mínimo:** se, depois de 6 meses, os indicadores 2 e 7 continuarem abaixo de metade da meta mesmo com as correções, a plataforma é reduzida ao modo mínimo (site com páginas prontas e SMS) e o investimento é redirecionado para os canais presenciais e de rádio, que são os que alcançam quem está offline. A decisão final de reduzir ou encerrar o projeto cabe à instituição responsável.

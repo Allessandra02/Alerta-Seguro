@@ -400,3 +400,83 @@ Esta tabela pressupõe que o controlador é um órgão público (Defesa Civil). 
 > A plataforma Alerta Seguro complementa o alerta de chuva da Defesa Civil: depois do aviso oficial, a pessoa consulta no celular o risco mapeado de alagamento e deslizamento por endereço, os telefones de ajuda e o que fazer. Sem cadastro; depois da primeira visita, abre sem internet. Limites: não emite alertas, não substitui sirenes, rádio e equipes de campo, não traz informação nova sem rede e não funciona sem energia no aparelho. O mapa mostra só áreas já mapeadas por órgãos oficiais; área sem marcação não é área segura.
 
 **Contagem:** 527 caracteres (com espaços).
+
+## 4. Acessibilidade e inclusão digital
+
+> **Em resumo:** quem mais precisa do alerta é, muitas vezes, quem tem mais dificuldade para recebê-lo: pessoas sem celular compatível, sem internet, idosas, com deficiência ou com pouca escolaridade. Por isso, a proposta combina um site leve, que funciona sem internet, com canais presenciais e de rádio. O site segue regras internacionais de acessibilidade (a WCAG, explicada em 4.2) em todos os fluxos principais. Os números sobre quem pode ficar de fora estão na seção 1.1.
+
+### 4.1 Quem pode ficar de fora
+
+**Sem aparelho, internet ou energia**
+
+| Grupo | Barreira | O que a solução faz |
+|---|---|---|
+| Pessoas sem smartphone ou com aparelho antigo (em geral, lançado antes de 2020 ou sem suporte a 4G/5G) | O Cell Broadcast só chega a aparelhos compatíveis com 4G/5G [8][9] | Reforça o SMS 40199, que funciona em celular simples; oferece um site leve, que abre em navegador básico; usa sirenes, rádio, TV e agentes de campo |
+| Pessoas sem internet ou sem pacote de dados | Muitas pessoas não usam a internet e muitos usuários ficam sem pacote (ver 1.1) | Modo offline (PWA); página leve, com limite de peso; mensagens por SMS e rádio; pedido de acesso gratuito ao endereço oficial junto às operadoras e à Anatel (com plano B, descrito abaixo); pontos de apoio com atendimento presencial e Wi-Fi de emergência quando possível |
+| Quem está sem energia ou sem sinal na hora | Nada digital funciona | O site já visitado e salvo no aparelho continua mostrando o último mapa; sirenes, rádio e agentes de campo; telefone 199 quando houver sinal |
+
+**Idosos**
+
+| Grupo | Barreira | O que a solução faz |
+|---|---|---|
+| Idosos | Usam menos a internet (ver 1.1); 45,4% das pessoas com deficiência têm 60 anos ou mais [12] | Interface simples, letras grandes e poucos passos; botão "Preciso de ajuda" sempre no mesmo lugar; materiais impressos e visitas; ensino do uso antes da temporada de chuvas, com ajuda de familiares e agentes comunitários |
+
+**Pessoas com deficiência**
+
+| Grupo | Barreira | O que a solução faz |
+|---|---|---|
+| Pessoas cegas ou com baixa visão (ver 1.1) | Mapa visual; cor como única informação; imagens sem descrição | Mapa com alternativa em texto e em lista (para leitor de tela); resumo em texto, como "seu local: risco alto de alagamento"; contraste e zoom; versão em áudio da orientação; sirene e rádio |
+| Pessoas surdas ou com deficiência auditiva | Alerta sonoro e vídeos sem legenda | Texto na tela e vibração do Cell Broadcast; vídeos com legenda e janela de Libras (Língua Brasileira de Sinais); orientações escritas simples; avisos visuais nos pontos de apoio |
+| Pessoas com deficiência motora ou mobilidade reduzida | Botões pequenos, mapa que exige arrastar e dificuldade para evacuar | Botões grandes; mapa que funciona pelo teclado e sem arrastar; **equipamentos e protocolos específicos nas equipes de campo para locais de difícil acesso e para pessoas com mobilidade reduzida**; articulação com a Defesa Civil para apoio individual (sem cadastro sensível na plataforma) |
+| Pessoas com deficiência cognitiva ou com baixa escolaridade (a taxa de analfabetismo entre pessoas com deficiência de 15 anos ou mais é de 21,3% [12]) | Texto longo, termos técnicos e navegação imprevisível | Linguagem clara e curta; ícones com texto; mesma estrutura em todas as telas; áudio e pictogramas; teste com usuários |
+| Pessoas surdas, com deficiência auditiva ou de fala | Pedir ajuda exige ligar (voz) para 199, 193 ou 192 | O botão "Preciso de ajuda" também oferece uma mensagem pronta (endereço e situação) para envio por texto, em canal a definir com a Defesa Civil (SMS, aplicativo de mensagens ou formulário). Até lá, a orientação presencial e vizinhos treinados cobrem a lacuna |
+
+**Outras barreiras**
+
+| Grupo | Barreira | O que a solução faz |
+|---|---|---|
+| Pessoas que não leem bem português (imigrantes e comunidades indígenas) | Mensagem só em português | Orientações essenciais nos outros idiomas mais comuns da região do piloto e em pictogramas, validadas com a comunidade (a definir com a Defesa Civil local) |
+| Pessoas em situação de rua ou sem endereço fixo | A consulta é por endereço, bairro ou ponto no mapa | Consulta por localização ou por mapa; lista de pontos de apoio e abrigos; orientação presencial das equipes |
+
+**Plano B se as operadoras não concederem o acesso gratuito a tempo do piloto.** O acesso sem consumo de pacote de dados ao endereço oficial (chamado *zero-rating*) é desejável, mas depende de acordo com as operadoras, que são empresas privadas, e de processos que podem levar tempo. Por isso, **o piloto não depende dele**. Se a gratuidade não vier, o projeto segue com estas medidas:
+
+1. **Canais que não gastam pacote de dados:** o Cell Broadcast e o SMS da Defesa Civil, o rádio, a TV, as sirenes e as equipes de campo.
+2. **Site pré-carregado:** pontos de apoio, escolas e unidades de saúde com Wi-Fi gratuito, onde a pessoa abre o site uma vez e ele guarda mapa, orientações e telefones no celular (PWA). Depois, ele funciona sem internet.
+3. **Página mínima:** uma versão ainda mais leve, só com texto, risco do local e telefones, para gastar o mínimo de dados.
+4. **Material impresso:** cartazes e folhetos com o endereço oficial, o QR code e os telefones, distribuídos antes da temporada de chuvas.
+5. **Negociação separada:** o pedido de gratuidade segue com a Anatel e as operadoras, sem condicionar a data do piloto.
+
+Cabe às operadoras e à instituição responsável decidir se e quando a gratuidade é viável.
+
+### 4.2 Requisitos de acessibilidade
+
+**Os cinco pontos mais importantes, em palavras simples:**
+
+1. Todo mapa tem uma versão em texto e em lista, para quem usa leitor de tela (programa que lê a tela em voz alta).
+2. O nível de risco nunca aparece só por cor: tem também padrão, texto e ícone.
+3. Letras e botões são grandes, com bom contraste e fáceis de tocar.
+4. O site inteiro funciona só com o teclado.
+5. Os textos são curtos e simples, e os vídeos têm legenda e janela de Libras.
+
+**Base.** A meta é seguir a WCAG 2.2 (Diretrizes de Acessibilidade para Conteúdo Web, regras internacionais para sites que todos conseguem usar) no **nível AA** em todos os fluxos principais. Também são usados os quatro princípios da aula, conhecidos como POUR (o conteúdo deve ser perceptível, operável, compreensível e robusto), a Lei Brasileira de Inclusão (art. 63, que exige acessibilidade nos sites de órgãos de governo e de empresas com sede ou representação no país) e o eMAG, modelo brasileiro de acessibilidade para sites públicos [39][40][41]. A tabela abaixo traz os requisitos principais de cada princípio POUR, 15 deles com o critério da WCAG correspondente e o 16º com a base indicada na própria linha; a auditoria do indicador 6 (seção 6) cobre todos os critérios A e AA da WCAG 2.2 nos fluxos principais.
+
+| # | Requisito concreto | Critério WCAG 2.2 | Nível | Como verificar |
+|---|---|---|---|---|
+| 1 | Toda imagem, ícone e elemento do mapa tem alternativa em texto; o mapa tem versão em lista e tabela ("Rua X: risco alto de alagamento") | 1.1.1 Conteúdo não textual | A | Leitor de tela (TalkBack ou NVDA) concluindo a tarefa "descobrir o risco da minha rua" |
+| 2 | O nível de risco nunca aparece só por cor: usa **cor + padrão + texto + ícone** (e não depende do "azul" do mapa) | 1.4.1 Uso de cor | A | Simulação de daltonismo; o mapa em escala de cinza continua legível |
+| 3 | Contraste de pelo menos 4,5:1 no texto e de pelo menos 3:1 nos elementos gráficos (limites de área, ícones e botões) | 1.4.3 Contraste (mínimo); 1.4.11 Contraste de elementos não textuais | AA | Ferramenta automática de contraste e revisão manual |
+| 4 | Zoom de texto até 200% e conteúdo que se reorganiza, sem rolagem horizontal, em tela pequena (320 px) | 1.4.4 Redimensionar texto; 1.4.10 Reflow | AA | Teste manual em celular e navegador |
+| 5 | Todo o site (inclusive o mapa) funciona pelo teclado, sem "armadilha" de foco, com foco visível e não escondido por outros elementos | 2.1.1 Teclado; 2.1.2 Sem armadilha; 2.4.7 Foco visível; 2.4.11 Foco não obscurecido (mínimo) | A/AA | Navegar só com a tecla Tab (teste relâmpago da aula) |
+| 6 | Toda ação de arrastar (mover o mapa) tem alternativa por clique simples (botões de mover e de aproximar) | 2.5.7 Movimentos de arrastar | AA | Teste manual com um único ponteiro |
+| 7 | Alvos de toque de pelo menos 24 x 24 px (meta: 44 x 44 px nos botões principais) e botão "Preciso de ajuda" sempre no mesmo lugar | 2.5.8 Tamanho do alvo (mínimo); 3.2.6 Ajuda consistente | AA/A | Inspeção da interface; teste com usuários com dificuldade motora |
+| 8 | Estrutura correta da página: títulos, listas, regiões, rótulos de formulário e nomes, funções e estados dos elementos que os leitores de tela entendem | 1.3.1 Informação e relações; 4.1.2 Nome, função, valor | A | Validador de HTML e leitor de tela |
+| 9 | Mensagens que aparecem sozinhas (alerta ativo, erro, atualização) são lidas pelo leitor de tela sem tirar o foco | 4.1.3 Mensagens de status | AA | Teste com leitor de tela |
+| 10 | Idioma da página e das partes em outro idioma identificado; linguagem simples, frases curtas e sem siglas sem explicação | 3.1.1 Idioma da página; 3.1.2 Idioma das partes; (3.1.5 Nível de leitura, que é AAA e é adotado como boa prática) | A/AA | Revisão editorial e teste de compreensão com usuários |
+| 11 | Vídeos de orientação com legenda sincronizada, audiodescrição e janela de Libras; áudio com transcrição | 1.2.1 Somente áudio e somente vídeo (transcrição); 1.2.2 Legendas; 1.2.5 Audiodescrição; 1.2.6 Língua de sinais (AAA, adotada por causa da Libras) | A/AA/AAA | Checklist de mídia antes de publicar |
+| 12 | Formulário de contestação com rótulos claros, identificação e sugestão de correção de erros, sem pedir de novo informação já fornecida e sem teste cognitivo para acessar | 3.3.1 Identificação de erro; 3.3.2 Rótulos ou instruções; 3.3.3 Sugestão de erro; 3.3.7 Entrada redundante; 3.3.8 Autenticação acessível (para o painel de operadores) | A/AA | Teste manual e com leitor de tela |
+| 13 | Nada que pisque mais de 3 vezes por segundo (as telas de alerta não usam animação intermitente) | 2.3.1 Três flashes ou abaixo do limite | A | Revisão de design |
+| 14 | Funciona em retrato e em paisagem e não bloqueia o zoom do navegador | 1.3.4 Orientação; 1.4.4 Redimensionar texto | AA | Teste manual |
+| 15 | Sem limite de tempo curto que impeça a leitura; qualquer expiração pode ser ampliada | 2.2.1 Tempo ajustável | A | Revisão dos fluxos |
+| 16 | Todo pedido de ajuda pode ser feito sem voz: por toque, mensagem pronta ou texto (formulário, SMS ou mensagem), além da ligação telefônica | Não há critério da WCAG específico para canal alternativo à voz; base: a aula (deficiência de fala: alternativa por toque ou texto) e 3.2.6 Ajuda consistente | A | Teste com usuários surdos ou com deficiência de fala; checklist de canais de ajuda |
+
+**Processo.** Uma auditoria automática roda a cada entrega, dentro da esteira de CI/CD. Antes do piloto, há também uma auditoria manual por especialista e **testes com usuários reais, conduzidos por organizações parceiras (associações de pessoas com deficiência, universidade), que repassam ao grupo apenas relatório agregado** (pessoas cegas com leitor de tela, pessoas surdas usuárias de Libras, idosos, pessoas com deficiência motora e pessoas sem smartphone próprio). Cada falha tem protocolo e prazo, e o relatório de conformidade é público. Seguindo o design universal da aula, a acessibilidade entra nos requisitos desde o início e não como remendo no final, quando custa mais caro.
